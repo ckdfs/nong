@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>首页 - 物联网智慧农业环境监测系统</title>
+
+  <script src="../static/js/jquery-1.12.4.min.js"></script>
+
+  <!-- Custom fonts for this template-->
+  <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="../static/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-emoji-sunglasses-fill" viewBox="0 0 16 16">
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v.116A4.22 4.22 0 0 1 8 5c.35 0 .69.04 1 .116V5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-1.994-1.839A2.99 2.99 0 0 0 8 6c-.393 0-.74.064-1.006.161A2 2 0 0 1 5 8h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM4.969 9.75A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .866-.5z"></path>
+          </svg>
+        </div>
+        <div class="sidebar-brand-text mx-3">物联网智慧农业环境监测系统<sup>TM</sup></div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="/home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+              <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"></path>
+            </svg>
+          <span style="margin-left:5px">首页</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        各设备数据
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+          </svg>
+          <span style="margin-left:5px">设备</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div id="device_page_num" class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">设备总数: 0</h6>
+          </div>
+        </div>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        总体统计数据
+      </div>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="/tables">
+          <i class="fas fa-fw fa-table"></i>
+          <span>表格</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ email }}</span>
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  退出登录
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">首页</h1>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">日期</div>
+                      <div id='dateNow' class="h5 mb-0 font-weight-bold text-gray-800">Unknown</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">时间</div>
+                      <div id='timeNow' class="h5 mb-0 font-weight-bold text-gray-800">Unknown</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">接入设备数</div>
+                      <div id="deviceNow" class="h5 mb-0 font-weight-bold text-gray-800">Unknown</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">警报数</div>
+                      <div id="alarmNow" class="h5 mb-0 font-weight-bold text-gray-800">Unknown</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Content Row -->
+
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">系统总览</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div id="dynamic_line_chart" style="width:100%;height:300px"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">指标总览</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div id="doughnut_chart" style="width:100%;height:300px"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; 2022. <a target="_blank" href="http://www.swu.edu.cn/">Southwest University</a> All rights reserved.</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">确定要退出吗？</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">如果您准备退出当前账号，请点击“确定”按钮。</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">取消</button>
+          <a class="btn btn-primary" href="/loginOut">确定</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="../static/js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="../static/vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="../static/js/demo/chart-area-demo.js"></script>
+  <script src="../static/js/demo/chart-pie-demo.js"></script>
+
+  <script src="../static/js/echarts.js"></script>
+
+  <script>
+    var chartDom1 = document.getElementById('dynamic_line_chart');
+    var myChart1 = echarts.init(chartDom1);
+    myChart1.showLoading();
+    var option1;
+
+    var chart_data1=[];
+    var chart_data2=[];
+    var chart_data3=[];
+
+    option1 = {
+      tooltip: {
+        trigger: 'axis'
+      },
+      legend: {
+        data: ['设备数','指标数','警报数']
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {}
+        }
+      },
+      xAxis: {
+        {#show: false,#}
+        type: 'time',
+        boundaryGap: false,
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [
+        {
+          name: '设备数',
+          type: 'line',
+          {#smooth: true,#}
+          data: chart_data1,
+        },{
+          name: '指标数',
+          type: 'line',
+          {#smooth: true,#}
+          data: chart_data2,
+        },{
+          name: '警报数',
+          type: 'line',
+          {#smooth: true,#}
+          data: chart_data3,
+        },
+      ]
+    };
+
+    option1 && myChart1.setOption(option1);
+  </script>
+
+  <script>
+    var chartDom2 = document.getElementById('doughnut_chart');
+    var myChart2 = echarts.init(chartDom2);
+    myChart2.showLoading();
+    var option2;
+
+    option2 = {
+      tooltip: {
+        trigger: 'item'
+      },
+      legend: {
+        top: '5%',
+        left: 'center'
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {}
+        }
+      },
+      color:['#91cc75', '#fac858'],
+      series: [
+        {
+          type: 'pie',
+          radius: ['40%', '70%'],
+          avoidLabelOverlap: false,
+          itemStyle: {
+            borderRadius: 10,
+            borderColor: '#fff',
+            borderWidth: 2
+          },
+          label: {
+            show: false,
+            position: 'center'
+          },
+          data: [
+            { name: '正常' },
+            { name: '警报' },
+          ]
+        }
+      ]
+    };
+
+    option2 && myChart2.setOption(option2);
+  </script>
+
+  <script>
+    function system_chart_refresh() {
+      $.ajax({
+        type: 'GET',
+        url: '/system_chart_refresh',
+        timeout: 10000,
+        success:function(_data){
+          console.log(_data[2][1]);
+          chart_data1[chart_data1.length]=_data[0];
+          chart_data2[chart_data2.length]=_data[1];
+          chart_data3[chart_data3.length]=_data[2];
+          if (chart_data1.length>20) chart_data1.shift();
+          if (chart_data2.length>20) chart_data2.shift();
+          if (chart_data3.length>20) chart_data3.shift();
+          {#console.log(chart_data1);#}
+          myChart1.hideLoading();
+          myChart1.setOption({
+            series: [{
+              data: chart_data1
+            },{
+              data: chart_data2
+            },{
+              data: chart_data3
+            }]
+          })
+          myChart2.hideLoading();
+          myChart2.setOption({
+            series: [{
+              data: [
+                { value: _data[1][1]-_data[2][1], name: '正常' },
+                { value: _data[2][1], name: '警报' },
+              ]
+            }]
+          });
+        }
+      })
+    }
+    setInterval(system_chart_refresh, 1000)
+  </script>
+
+    <script>
+    function date() {
+        $.ajax({
+            type: 'GET',
+            url: '/date',
+            timeout: 10000,
+            success:function(data){
+                $('#dateNow').html(data)
+            },
+            error:function(xhr,type,errorThrown){
+
+            }
+        })
+    }
+    setInterval(date, 1000)
+    </script>
+
+    <script>
+    function time() {
+        $.ajax({
+            type: 'GET',
+            url: '/time',
+            timeout: 10000,
+            success:function(data){
+                $('#timeNow').html(data)
+            },
+        })
+    }
+    setInterval(time, 1000)
+    </script>
+
+    <script>
+    function device() {
+        $.ajax({
+            type: 'GET',
+            url: '/device',
+            timeout: 10000,
+            success:function(data){
+                $('#deviceNow').html(data)
+            },
+        })
+    }
+    setInterval(device, 1000)
+    </script>
+
+    <script>
+    function alarm() {
+        $.ajax({
+            type: 'GET',
+            url: '/alarm',
+            timeout: 10000,
+            success:function(data){
+                $('#alarmNow').html(data)
+            },
+        })
+    }
+    setInterval(alarm, 1000)
+    </script>
+
+    <script>
+        function change_div(){
+            $.ajax({
+                type: 'GET',
+                url: '/device_card_refresh',
+                timeout: 10000,
+                success:function(a){
+                    $('#device_page_num').children().remove()
+                    $('#device_page_num').append($("<h6 class='collapse-header'>设备总数: "+a[0]+"</h6>"))
+                    for (var i in a[1]){
+                        var div = $("<a class='collapse-item' href=\'/devicepage/" + i + "\'>" + a[1][i] + "</a>\n")
+                        $('#device_page_num').append(div)
+                    }
+                },
+            })
+        }
+        setInterval(change_div, 1000)
+    </script>
+
+</body>
+
+</html>
